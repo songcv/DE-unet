@@ -6,25 +6,15 @@ This repository will provide the code for the following paper:
 
 **YNet: **<br>
 
+Our code is trained on only one 3090.
 
-Our code is based on MMSegmentaion (version 0.16.0).
-
-## Installation
-### Create a conda virtual environment and activate it (conda is optional)
+## Requirements
+### conda virtual environment 
 ```
-conda create -n isdnet python=3.8 -y
-conda activate isdnet
-```
-### Install dependencies
-```
-# Install pytorch firstly, the cudatoolkit version should be same in your system.
-conda install pytorch==1.6.0 torchvision==0.7.0 cudatoolkit=10.1 -c pytorch
-
-# Or you can install via pip
-pip install torch==1.6.0 torchvision==0.7.0
-
-# Install
-python setup.py develop
+python=3.8 
+pytorch==1.10.0
+cuda==11.3 
+mmcv==1.4.0
 ```
 ## Datasets
 We follow [FCtL](https://github.com/liqiokkk/FCtL) to split dataset.
@@ -32,13 +22,13 @@ We follow [FCtL](https://github.com/liqiokkk/FCtL) to split dataset.
 Create folder named 'root_path', its structure is  
 ```
     root_path/
-    ├── img_dir
+    ├── image
        ├── train
           ├── xxx.jpg
           ├── ...
        ├── val
        ├── test
-    ├── rgb2id
+    ├── mask
       ├── train
           ├── mask.png(0-num_class)
           ├── ...
@@ -46,22 +36,13 @@ Create folder named 'root_path', its structure is
       ├── test
 ```
 
-
 ### Training
-DeepGlobe
-`./tools/dist_train.sh configs/isdnet/isdnet_r18-d8_1224x1224_80k_DeepGlobe.py 4`
-
-Inria Aerial
-`./tools/dist_train.sh configs/isdnet/isdnet_r18-d8_2500x2500_40k_InriaAerial.py 4`
-
+`python  tools/train.py   config/path  --work-dir   save/path `
 ### Evaluation
 Accuracy:
-`python tools/test.py config_file checkpoints_file --eval mIoU`
-
-*Please download following pretrianed-model [here](https://drive.google.com/file/d/1FfG-qRlGy-2BsVjN2ZcKTEG9wZeo3sdW/view?usp=sharing)*
-
+`python tools/test.py config_file checkpoints_file   --eval mIoU  `
 FPS:
-`python tools/fps_test.py config_file --height height of the test image --width width of the test image`
+`python tools/fps_test.py config_file   --height /   --width  /`
 
 
 ## Results
@@ -73,7 +54,7 @@ FPS:
 ### Inria Aerial
 | Class |  building  | background |
 | :---: | :---: | :---: |
-| IoU | 74.39 | 97.58 |
+| IoU | 77.17 | 95.58 |
 
 
 ## Citation
