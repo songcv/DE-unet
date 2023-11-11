@@ -1,6 +1,6 @@
 # SUNet
 
-![teaser](pic/net.pdf)
+![teaser](pic/net.png)
 
 ## Requirements
 ### conda virtual environment 
