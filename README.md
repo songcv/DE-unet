@@ -1,12 +1,6 @@
-# YNet
+# SUNet
 
-![teaser](resources/pipeline.png)
-
-This repository will provide the code for the following paper:
-
-**YNet: **<br>
-
-Our code is trained on only one 3090.
+![teaser](pic/net.pdf)
 
 ## Requirements
 ### conda virtual environment 
@@ -17,8 +11,6 @@ cuda==11.3
 mmcv==1.4.0
 ```
 ## Datasets
-We follow [FCtL](https://github.com/liqiokkk/FCtL) to split dataset.
-
 Create folder named 'root_path', its structure is  
 ```
     root_path/
