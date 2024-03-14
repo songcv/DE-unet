@@ -38,4 +38,4 @@ FPS:
 `python tools/fps.py config_file   --height /   --width  /`
 
 
-pic/net.png
+![image](https://github.com/MaiEmily/map/blob/master/public/image/20190528145810708.png)
