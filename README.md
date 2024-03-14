@@ -36,3 +36,6 @@ Accuracy:
 ### Speed
 FPS:
 `python tools/fps.py config_file   --height /   --width  /`
+
+
+pic/net.png
