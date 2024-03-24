@@ -1,4 +1,4 @@
-# SUNet
+# DE-unet
 
 ![teaser](pic/net.png)
 
@@ -13,14 +13,14 @@ mmcv==1.4.0
 ## Datasets
 Create folder named 'root_path', its structure is  
 ```
-    root_path/
-    ├── image
+    aeril_root_path/
+    ├── images
        ├── train
-          ├── xxx.jpg
+          ├── xxx.tif
           ├── ...
        ├── val
        ├── test
-    ├── mask
+    ├── masks
       ├── train
           ├── mask.png(0-num_class)
           ├── ...
