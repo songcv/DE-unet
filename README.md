@@ -6,9 +6,9 @@
 ### conda virtual environment 
 ```
 python=3.8 
-pytorch==1.10.0
-cuda==11.3 
-mmcv==1.4.0
+pytorch==1.13.0
+cuda==11.7 
+pip install mmcv-full==1.7.0 -f https://download.openmmlab.com/mmcv/dist/cu117/torch1.13.0/index.html
 ```
 ## Datasets
 Create folder named 'root_path', its structure is  
